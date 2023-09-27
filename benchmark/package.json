@@ -1,0 +1,11 @@
+{
+  "name": "@cryptella/crypto-benchmark",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@noble/ed25519": "^2.0.0",
+    "tinybench": "^2.5.1"
+  }
+}

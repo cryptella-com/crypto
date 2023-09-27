@@ -1,0 +1,36 @@
+{
+  "name": "@cryptella/crypto",
+  "description": "Web Crypto helpers for ECDSA signatures",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Regeci; BAU Software s.r.o.",
+    "url": "https://bausw.com/"
+  },
+  "homepage": "https://github.com/cryptella-com/crypto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptella-com/crypto.git"
+  },
+  "keywords": [
+    "crypto",
+    "ecdsa"
+  ],
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "lib/index.ts",
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
