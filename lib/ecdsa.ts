@@ -1,4 +1,4 @@
-import { base64ToArrayBuffer, arrayBufferToBase64 } from './helpers';
+import { base64Decode, base64Encode } from '@cryptella/utils/encoding';
 
 export type TCurveName = 'P-256' | 'P-384' | 'P-521';
 
@@ -44,7 +44,7 @@ export async function exportPublicKey(
 
 export async function exportPrivateKey(privateKey: CryptoKey) {
   const jwk = await crypto.subtle.exportKey('jwk', privateKey);
-  return base64ToArrayBuffer(jwk.d!, true);
+  return base64Decode(jwk.d!, true);
 }
 
 export async function importPublicKey(
@@ -74,7 +74,7 @@ export async function importKeyPair(
     'jwk',
     {
       ...jwk,
-      d: arrayBufferToBase64(privateKey, true),
+      d: base64Encode(privateKey, true),
       key_ops: ['sign'],
     },
     {
